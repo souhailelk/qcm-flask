@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bienvenue</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <br>
+    <CENTER><h2 style="font-size:200%;  text-shadow: 2px 2px 4px #9fadf9;">Bienvenue dans le test de python</h2></CENTER>
+    <CENTER><img width="220" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/640px-Python.svg.png" alt="Description de l'image" class="image"> </CENTER>
+    <BR>
+    <BR>
+
+    <form method="post">
+        <div>
+            <label for="name">Veuillez entrer votre nom :</label>
+            <br>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <button type="submit">Commencer le QCM</button>
+        </div>
+    </form>
+</body>
+</html>

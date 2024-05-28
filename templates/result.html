@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Résultat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+       <center>
+          <h2 style="font-size:200%; color: rgb(2, 11, 70); text-shadow: 2px 2px 4px #9fadf9;">Résultat du QCM</h2>
+       </center>
+      <br>
+      <br>
+      <center><img width="325"  src="/static/image/QUIZ-removebg-preview.png" class="image" /> </center>
+      <BR>
+      <BR>
+      <center>
+        <h1>Score : {{ score }}/10</h1>
+      </center>
+      <center>
+        <h3> {{ message }}</h3>
+      </center>
+     <center><a href="{{ url_for('index') }}">Recommencer</a></center>
+</body>
+
+</html>

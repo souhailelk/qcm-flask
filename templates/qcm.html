@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>QCM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <center><h2 style="font-size:200%; color: rgb(2, 11, 70); text-shadow: 2px 2px 4px #9fadf9;"> 10 QCM en langage Python </h2></center>
+    <br>
+    <form method="post">
+        {% for i, question in enumerate(questions) %}
+            <div question-container>
+                
+                <h3>{{ question.question }}</h3>
+                {% for choice in question.choices %}
+                    <div class="choice-container">
+                        <table width="100%">
+                          <tr>
+                            <td width="80%"><label for="q{{ i }}{{ loop.index0 }}">{{ choice }}</label></td>
+                            <td width="20%"><input type="radio" id="q{{ i }}{{ loop.index0 }}" name="question-{{ i }}" value="{{ choice }}" required></td>
+                          </tr>  
+                        </table>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        <div>
+            <button type="submit">Soumettre le QCM</button>
+        </div>
+    </form>
+</body>
+</html>
